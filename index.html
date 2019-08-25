@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Page-Enter" content="blendTrans(Duration=1.0)">
+    <title>QQ-music</title>
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="css/index.css">  <!-- 引入css样式文件  -->
+    <script language="JavaScript" src="js/jquery-1.12.4.js"></script> <!--  引入js 文件 -->
+    <script language="JavaScript" src="js/jquery.mCustomScrollbar.concat.min.js"></script> <!--  引入js 文件 -->
+    <script language="JavaScript" src="js/playmusic.js"></script> <!--  引入js 文件 -->   
+    <script language="JavaScript" src="js/Progress.js"></script>  <!-- 引入js 文件   --> 
+    <script language="JavaScript" src="js/lyrictext.js"></script>  <!-- 引入js 文件   --> 
+    <script language="JavaScript" src="js/index.js"></script> <!--  引入js 文件 -->
+</head>
+<body>
+    <!-- 头部信息导航 -->
+    <div id="header">
+        <!-- logo 部分 -->
+        <h1 class="logo"><a href="#"></a></h1>
+        <!-- 导航栏部分 -->
+        <ul class="navigation">
+            <li><a href="#">登陆</a></li>
+            <li><a href="#">设置</a></li>
+        </ul>
+    </div>
+    <!-- 中间主题内容 -->
+    <div id="content">
+        <!-- 内容部分 -->
+        <div class="content_in">
+            <!-- 内容左半部分 -->
+            <div class="content_left">
+                <!-- 左半部分导航 -->
+                <div class="content_toolber">
+                    <!-- i 图标显示  -->
+                    <a href="#"><span><i></i>收藏</span></a>
+                    <a href="#"><span><i></i>添加到</span></a>
+                    <a href="#"><span><i></i>下载</span></a>
+                    <a href="#"><span><i></i>删除</span></a>
+                    <a href="#"><span><i></i>清空列表</span></a>
+                </div>
+                <!-- 左半部分列表 -->
+                <div class="content_list" >
+                    <ul class="content_list_header">
+                        <li class="list_textbox">
+                            <i></i>
+                        </li>
+                        <li class="list_number"></li>
+                        <li class="list_music">歌曲</li>
+                        <li class="list_singer">歌手</li>
+                        <li class="list_time">时间</li>
+                    </ul>
+                    <!-- <ul class="content_list_list">
+                            <li class="list_textbox">
+                                <i></i>
+                            </li>
+                            <li class="list_music">曾经的你
+                                <span class="list_number">1</span>
+                                <i class="play_gif"></i>
+                                <div class="list_music_img">
+                                    <a href="javascript:;" title="播放" class="list_play"></a>
+                                    <a href="javascript:;" title="添加"></a>
+                                    <a href="javascript:;" title="下载"></a>
+                                    <a href="javascript:;" title="分享"></a>
+                                </div>
+                            </li>
+                           <li class="list_singer">许巍</li>
+                            <li class="list_time">
+                                <span>03:42</span>
+                                <a href="javascript:;" title="删除"></a>
+                            </li>
+                    </ul> -->
+                </div>
+            </div>
+            <!-- 内容右半部分 -->
+            <div class="content_right">
+                <!-- 歌曲信息 -->
+                <div class="song_info">
+                    <a href="javascript:;" class="song_ingo_pic">
+                        <img src="images/player_cover.png" alt="歌手">
+                    </a>
+                    <div class="song_name">
+                        歌曲名:
+                        <a href="javascript:;">你是人间四月天</a> 
+                    </div>
+                    <div class="song_singer">
+                        歌手名:
+                        <a href="javascript:;">解忧邵帅</a>
+                    </div>
+                    <div class="song_special">
+                        专辑名:
+                        <a href="javascript:;">你是人间四月天</a>
+                    </div>
+                </div>
+                <!-- 歌曲单词 -->
+                <div class="song_word">
+                    <ul class="uls"> 
+                        <!-- <li class="word_grenn">跨越山河去拥抱你 </li>
+                        <li>盼望每天都看到你</li>
+                        <li>花花绿绿的世界里,我仍喜欢你</li>
+                        <li>愿你未来仍热泪盈眶</li>
+                        <li>最美好的年纪里,柴米油盐酱醋你</li>
+                        <li>你不能一个人离去</li>
+                        <li>愿你在看不到我的地方安然无恙</li>
+                        <li>多大风浪都在一起</li>
+                        <li>关于你所有的消息</li>
+                        <li>最美好的年纪里,柴米油盐酱醋你</li>
+                        <li>你不能一个人离去</li>
+                        <li>愿你在看不到我的地方安然无恙</li>
+                        <li>多大风浪都在一起</li>
+                        <li>关于你所有的消息</li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 尾部部分 -->
+    <div id="footer">
+        <div class="footer_in">
+            <!-- 上 暂停 下 按钮 -->
+             <a href="javascript:;" class="foot_up" title="alt + ←"></a>
+             <a href="javascript:;" class="foot_suspend" title="Space"></a>
+             <a href="javascript:;" class="foot_below" title="alt + →"></a>
+            <!-- 音乐进度条按钮 -->
+            <div class="foot_progress">
+                <div class="progress_top">
+                    <!-- 歌曲名称 -->
+                        <a href="javascript:;" class="music" title="">告白气球</a>
+                        -
+                        <a href="javascript:;" class="one">周杰伦</a>
+                        <span>00:00 / 00:00</span>
+                </div>
+                <!-- 歌曲进度条 -->
+                <div class="progress_bar">
+                    <div class="progress_line">
+                        <div class="progress_circle"></div>
+                    </div>
+                </div>
+            </div>
+            <a href="javascript:;" class="foot_refresh"></a>    <!-- 刷新按钮 -->
+            <a href="javascript:;" class="foot_like"></a>  <!-- 喜欢按钮 -->
+            <a href="javascript:;" class="foot_down"></a> <!-- 下载按钮 -->
+            <a href="javascript:;" class="foot_comment"></a> <!-- 评论按钮 -->
+            <a href="javascript:;" class="foot_model"></a> <!-- 切换模式按钮 -->
+            <!-- 音量模式 -->
+            <div class="foot_volume">
+                <a href="javascript:;" class="foot_vol"></a> <!-- 音量播放  -->
+                <!-- 音量条按钮 -->
+                <div class="volume_bar">
+                        <div class="volume_line">
+                            <div class="volume_circle"></div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 背景模糊 -->
+    <div class="body_img"></div>
+    <!-- 背景覆盖淡灰色遮罩 -->    
+    <div class="body_color"></div>
+    <!-- 音乐播放 -->
+    <audio src="" autoplay="autoplay"></audio>
+</body>
+</html>
